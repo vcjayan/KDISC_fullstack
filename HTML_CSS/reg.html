@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+<script src="../JS/registerscript.js" ></script>
 <body>
     
 
@@ -15,33 +16,41 @@
                  <tr>
                  <td class="reg">name</td>
                  <td >
-                     <input type="text"/>
+                     <input type="text" id="nam"/>
                  </td>
                  </tr>
                  <tr>
                      <td>email id</td>
                      <td>
-                         <input type="text"/>
+                         <input type="text" id="emailid"/>
                      </td>
                  </tr>
                  <tr>
                      <td>mobile number</td>
-                     <td><input type="text" pattern="[6789]{1}[0-9]{9}" required/>                      
+                     <td><input type="text" id="mobilenumber" pattern="[6789]{1}[0-9]{9}" required/>                      
                      </td>
                  </tr>
                  <tr>
                          <td>password                   
                          </td>
                          <td>
-                             <input type="password" />
+                             <input type="password" id="password" />
                          </td>
+                         <tr>
+<td>confirm password</td>
+<td>
+        <input type="password" id="cnfpassword" />
+    </td>   
+
+
+                         </tr>
                          
                          
                  <tr>
                      <td>
                  
                      </td>
-                     <td><button type="submit" class = "btn btn-danger">login</button></td>
+                     <td><button type="button" class = "btn btn-danger" onclick="readvalues()">login</button></td>
                  </tr>
                  
                  
