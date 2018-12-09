@@ -10,14 +10,14 @@
 
 body {
 
-    background-image: url(software.jpg);
-   object-fit: cover;
+    background-image: url(Software.jpg);
+   background-size: 100%;
     
 }
 h1 {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    color: darkred;
+    color: whitesmoke;
     font-weight: bold;
 }
 
@@ -28,17 +28,25 @@ text-align: center;
 
 }
 Table {
-    width: 100%;
+    width: 50%;
     table-layout: inherit;
-    margin-left: 400px;
     
+    
+    align-items: center;
+    margin-left: 450px;
+ 
    
+}
+.Flowtext
+{
+    color:violet;
 }
 
 td {
 
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: left;
+    color: white;
 
 }
 
@@ -56,7 +64,7 @@ Marquee {
            <div class="col-sm-6"></div>
     <br><h1>Feedback page</h1><br>
     <br><h2>Tell us how we can help you</h2><br>
-<marquee>ICT Academy provides better career paths with upcoming new technologies
+<marquee class="Flowtext">ICT Academy provides better career paths with upcoming new technologies
 
 </marquee>
 
@@ -71,23 +79,23 @@ Marquee {
     </tr>
 <tr>
 <td>Message</td>
-<td><input type="text" maxlength="250" placeholder="Enter your message here">
+<td><input type="text" maxlength="250" placeholder="Max 250 characters">
 </td>
 </tr>
 
 
 <tr>
 <td>Email</td>
-<td><input type="email" placeholder="Enter your email id here"></td>
+<td><input type="email" placeholder="xyz@ymail.com"></td>
 </tr>
 <tr>
 <td>Mobile</td>
-<td><input type="text" placeholder="Enter your mobile number here" pattern="[6789]{1}[0-9]{9}" required/></td>
+<td><input type="text" placeholder="10 digit mobile number" pattern="[6789]{1}[0-9]{9}" required/></td>
 </tr>
 <tr>
 <td></td>
 <td>
-        <button type="submit" class = "btn btn-danger">Submit</button>
+        <button type="submit" class = "btn btn-danger" width="100%">Submit</button>
 </td>
 
 </tr>
