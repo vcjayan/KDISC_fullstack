@@ -30,7 +30,7 @@
              function displaytoggle(){
                  var login=document.getElementById("login");
                 if (login.style.display==='none'){
-                    login.style.display='block'
+                    login.style.display='flex'
                 }
                 else{
                     login.style.display='none'
@@ -38,12 +38,11 @@
 
                 var register=document.getElementById("register");
                 if (register.style.display==='none'){
-                    register.style.display='block'
+                    register.style.display='flex'
                 }
                 else{
                     register.style.display='none'
                 }
-
              }
 
                        
@@ -55,48 +54,35 @@ body {
 }
     .container {
         margin: auto;
-        display: flex;
-        justify-content: space-around;
-        margin-top: 150px;
-        flex-flow: wrap;
-        
-        
-        
-                 
+        width: 100%;       
+        margin-top: 150px;                        
     }
+
     .container_login {
         display: flex;
         justify-content: center;    
-        border: 1px solid;  
-       
-        
-        
-        
-      
+        flex-direction: row;            
     }
+
     .container_register {
         display: flex;
-        justify-content: center;    
+        flex-direction: row;
+        justify-content: center;   
         /* display: none;   */
-        border: 1px solid;
-        
-        
+    
     }
+
     .image {
         height: 435px;
     }
     
-
-
-        .form1 {       
+    .form1 {       
     
         text-align: left;
-        float:right;
+       
         background-color:turquoise; 
         height: 374px;
-                
-               
-           
+
     }
     .form2 {
         
@@ -104,23 +90,22 @@ body {
         text-align: left;
         width: auto;;        
         background-color: turquoise; 
-        height: auto;
-        float: right;           
-    
+        height: auto; 
     }
-    
+     
+    .form1 input {
+        width: auto;
+        height: 30px;    
+        margin: 10px 10px 10px;
+        border-radius: 5px;
+    }
+
     .form2 input {
         width: auto;
         height: 30px;
         margin: 0px 10px 10px;
         border-radius: 5px;
        
-    }
-    .form1 input {
-        width: auto;
-        height: 30px;    
-        margin: 10px 10px 10px;
-        border-radius: 5px;
     }
   
     
@@ -147,22 +132,24 @@ body {
        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
    }
+
    .text {
        color:white;
    }
+
    .nation {
     margin: 0 10px 0;
     font-size: 80%;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-       
+    font-family: Verdana, Geneva, Tahoma, sans-serif;     
    }
+
     </style>
+
 </head>
 <body>
     <div class="container">        
-        <div class="container_login" id="login" style="display: block;">
-        <img src="Snow1.jpg">
-                       
+        <div class="container_login" id="login"  >
+        <img src="Snow1.jpg">   
             <form class="form1">
                 <h1 class="prompt">Login</h1>
                 <br>
@@ -175,15 +162,12 @@ body {
                 <br>
                 <p class="message">Not registered?<a href="#" onclick="displaytoggle()"class="text">Register</a></p> 
             </form>
-        
-    </div>
+         </div>
 
         <div class="container_register" id="register" style="display: none;">
             <img  class="image" src="Snow1.jpg"> 
-           
             <form class="form2" name="myform" onsubmit="return emailvalidate()" method="post">
                 <h1 class="prompt">Register</h1>
-            
                 <input type="text" placeholder="Fullname" required>
                 <br>
                 <input type="email" placeholder="Email" required >
@@ -200,8 +184,7 @@ body {
                 <hr>
                 <input type="radio" name="terms" required>I accept the terms and conditions
                 <br>
-                <input type="submit" value="Create account"> 
-                
+                <input type="submit" value="Create account">  
                 <p class="message">Already registered?<a href="#" onclick="displaytoggle()"class="text">Login</a></p> 
             </form>
            </div>
