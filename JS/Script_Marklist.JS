@@ -29,9 +29,6 @@ else if (c>=50 && c<55) {
 else if (c<50) {
     console.log("E")}
 
-
-
-
 var name=document.getElementById("name").value;
 var college=document.getElementById("college").value;
 var candidatecode=document.getElementById("code").value;

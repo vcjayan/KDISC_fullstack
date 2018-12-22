@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>University of Calicut</title>
+
+    <style>
+.Heading {
+    text-align: center;
+}
+
+.container {
+
+    max-width: 800px;    
+    position: relative;
+    margin: auto;
+}
+.container table {
+    margin: auto;
+    border: 1px solid;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: cadetblue;
+
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color:orange;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 25px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.Numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation:cubic-bezier(0.075, 0.82, 0.165, 1);
+  -webkit-animation-duration: 1.5s;
+  animation-name: initial;
+  
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+.container1 {
+    text-align: center;
+}
+.container2 {
+    text-align: center;
+}
+.inputtable {
+    text-align: left;
+    margin: auto;
+    border: 1px solid;
+}
+
+.status {
+    text-align: left;
+    margin: auto;
+    border: 1px solid;
+}
+.basicdata {
+    text-align: left;
+    margin: auto;
+    border: 1px solid;
+    
+}
+tr, td, th{
+    padding: 3px;
+  
+    width: 200px;
+}
+.marklist {
+    text-align: left;
+    margin: auto;
+    border: 1px solid;
+}
+</style>
+
+    
+</head>
+<body>
+  
+
+ 
+   <div class="container">
+
+        <div class="Images_fade">
+            <img src="../HTML_CSS/University.jpg" alt="logo" width="100%">
+            <div class="Numbertext">1/3</div>
+            <div class="text">Right ambiance</div>
+        </div>
+
+        <div class="Images_fade">
+            <img src="../HTML_CSS/University1.jpg" alt="logo" width="100%">
+            <div class="Numbertext">2/3</div>
+            <div class="text">Friendly atmosphere</div>
+        </div>
+
+        <div class="Images_fade">
+            <img src="../HTML_CSS/University2.jpg" alt="logo" width="100%">
+            <div class="Numbertext">3/3</div>
+            <div class="text">The true learning path</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+   </div> 
+
+<br>
+
+<div style="text-align: center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+
+
+<div class="container1">
+   <h1>Input details</h1>
+
+   <table class="inputtable">
+    <tr>
+    <td>Name</td>
+    <td><input type="text" id="name" placeholder="Enter your name here"></td>
+    </tr>
+    <tr>
+        <td>College</td>
+        <td><input type="text" id="college" placeholder="Enter collegename here"></td>
+        </tr>
+      <tr>
+      <td>Candidate code</td>
+      <td><input type="text" id="code" placeholder="Enter candidate code"></td>
+      </tr>
+
+      <tr>
+      <td>Semester</td>
+       <td><input type="text" id="sem" placeholder="S1,S2,S3,S4,S5,S6,S7,S8"></td>
+      </tr>
+      <tr>
+          <td>Subject1 Name</td>
+          <td><input type="text" id="sub1name" placeholder="Enter subject name"></td>
+      </tr> 
+            <tr>
+              <td>Subject1 Marks obtained</td>
+              <td><input type="text" id="sub1mark" placeholder="Enter marks obtained"></td>
+          </tr> 
+          <tr>
+            <td>Subject1 total marks</td>
+            <td><input type="text" id="sub1total" placeholder="Enter total marks"></td>
+              </tr> 
+              <tr>
+                <td>Subject2 Name</td>
+                <td><input type="text" id="sub2name" placeholder="Enter subject name"></td>
+                </tr> 
+                <tr>
+                    <td>Subject2 Marks obtained</td>
+                    <td><input type="text" id="sub2mark" placeholder="Enter marks obtained"></td>
+                </tr> 
+                <tr>
+                    <td>Subject2 total marks</td>
+                    <td><input type="text" id="sub2total" placeholder="Enter total marks"></td>
+                </tr> 
+                <tr>
+                    <td>Subject3 Name</td>
+                    <td><input type="text" id="sub3name" placeholder="Enter subject name"></td>
+                </tr> 
+                <tr>
+                    <td>Subject3 Marks obtained</td>
+                    <td><input type="text" id="sub3mark" placeholder="Enter marks obtained"></td>
+                </tr> 
+                <tr>
+                    <td>Subject3 total marks</td>
+                    <td><input type="text" id="sub3total" placeholder="Enter total marks"></td>
+                </tr> 
+              <tr>
+                  <td></td>
+                  <td><button type="button" onclick="Marklist()">Generate Marklist</button> </td>
+              </tr>         
+    </table>
+
+</div>
+
+<br>
+<br> 
+
+    
+    <div class="container2">    
+        <h1>Candidate Marklist</h1>
+        <table class="basicdata">
+            <tr>
+                <td>Name:</td>
+                <td><p id="name1"></p></td>
+                <td>Candidate code:</td>
+                <td><p id="code1"></p> </td>
+            </tr>
+            <tr>
+                    <td>Semester:</td>
+                    <td><p id="sem1"></p></td>
+                    <td>College:</td>
+                    <td><p id="college1"></p> </td>
+                </tr>    
+       </table>
+    </div>
+    
+<div class="container_marklist">
+    <table class="marklist">
+        <tr>
+            <th>Subject name</th>
+            <th>Marks obtained</th>
+            <th>Total marks</th>
+            <th>Grade</th>
+        </tr>
+        <tr>
+            <td><p id="subname1"></p></td>
+            <td><p id="submark1"></p></td>
+            <td><p id="subtotal1"></p></td>
+            <td><p id="grade1"></p></td>
+        </tr>
+        <tr>
+            <td><p id="subname2"></p></td>
+            <td><p id="submark2"></p></td>
+            <td><p id="subtotal2"></p></td>
+            <td><p id="grade2"></p></td>
+        </tr>
+        <tr>
+            <td><p id="subname3"></p></td>
+            <td><p id="submark3"></p></td>
+            <td><p id="subtotal3"></p></td>
+            <td><p id="grade3"></p></td>
+        </tr>
+    </table>
+</div>
+<table class="status">
+    <tr>
+        <td>Final status</td>
+        <td><p id="status"></p></td>
+    </tr>
+</table>
+
+</div>
+
+<script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("Images_fade");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+
+        
+        function Marklist()
+
+{ var a = document.getElementById("sub1mark").value;
+    var b = document.getElementById("sub1total").value;
+    var c = (parseInt(a)/parseInt(b))*100;
+
+    var d = document.getElementById("sub2mark").value;
+    var e = document.getElementById("sub2total").value;
+    var f = (parseInt(d)/parseInt(e))*100;
+
+    var g = document.getElementById("sub3mark").value;
+    var h = document.getElementById("sub3total").value;
+    var i = (parseInt(g)/parseInt(h))*100;
+
+
+if (c>=95) {
+console.log("S")
+document.getElementById("grade1").innerHTML="S";
+}
+else if (c>=90 && c<95){
+    console.log("A+")
+    document.getElementById("grade1").innerHTML="A+";
+}
+else if (c>=85 && c<90) {
+    console.log("A")
+    document.getElementById("grade1").innerHTML="A";
+}
+else if (c>=80 && c<85) {
+    console.log("B+")
+    document.getElementById("grade1").innerHTML="B+"
+}
+else if (c>=75 && c<80) {
+    console.log("B")
+    document.getElementById("grade1").innerHTML="B"
+}
+else if (c>=70 && c<75) {
+    console.log("C+")
+    document.getElementById("grade1").innerHTML="C+"
+}
+else if (c>=65 && c<70) {
+    console.log("C")
+    document.getElementById("grade1").innerHTML="C"
+}
+else if (c>=60 && c<65) {
+    console.log("D+")
+    document.getElementById("grade1").innerHTML="D+"
+}
+else if (c>=55 && c<60) {
+    console.log("D")
+    document.getElementById("grade1").innerHTML="D"
+}
+else if (c>=50 && c<55) {
+    console.log("E+")
+    document.getElementById("grade1").innerHTML="E+"
+}
+else if (c<50) {
+    console.log("E")
+    document.getElementById("grade1").innerHTML="E"
+}
+
+
+
+if (f>=95) {
+console.log("S")
+document.getElementById("grade2").innerHTML="S";
+}
+else if (f>=90 && f<95){
+    console.log("A+")
+    document.getElementById("grade2").innerHTML="A+";
+}
+else if (f>=85 && f<90) {
+    console.log("A")
+    document.getElementById("grade2").innerHTML="A";
+}
+else if (f>=80 && f<85) {
+    console.log("B+")
+    document.getElementById("grade2").innerHTML="B+"
+}
+else if (f>=75 && f<80) {
+    console.log("B")
+    document.getElementById("grade2").innerHTML="B"
+}
+else if (f>=70 && f<75) {
+    console.log("C+")
+    document.getElementById("grade2").innerHTML="C+"
+}
+else if (f>=65 && f<70) {
+    console.log("C")
+    document.getElementById("grade2").innerHTML="C"
+}
+else if (f>=60 && f<65) {
+    console.log("D+")
+    document.getElementById("grade2").innerHTML="D+"
+}
+else if (f>=55 && f<60) {
+    console.log("D")
+    document.getElementById("grade2").innerHTML="D"
+}
+else if (f>=50 && f<55) {
+    console.log("E+")
+    document.getElementById("grade2").innerHTML="E+"
+}
+else if (f<50) {
+    console.log("E")
+    document.getElementById("grade2").innerHTML="E"
+}
+
+
+if (i>=95) {
+console.log("S")
+document.getElementById("grade3").innerHTML="S";
+}
+else if (i>=90 && i<95){
+    console.log("A+")
+    document.getElementById("grade3").innerHTML="A+";
+}
+else if (i>=85 && i<90) {
+    console.log("A")
+    document.getElementById("grade3").innerHTML="A";
+}
+else if (i>=80 && i<85) {
+    console.log("B+")
+    document.getElementById("grade3").innerHTML="B+"
+}
+else if (i>=75 && i<80) {
+    console.log("B")
+    document.getElementById("grade3").innerHTML="B"
+}
+else if (i>=70 && i<75) {
+    console.log("C+")
+    document.getElementById("grade3").innerHTML="C+"
+}
+else if (i>=65 && i<70) {
+    console.log("C")
+    document.getElementById("grade3").innerHTML="C"
+}
+else if (i>=60 && i<65) {
+    console.log("D+")
+    document.getElementById("grade3").innerHTML="D+"
+}
+else if (i>=55 && i<60) {
+    console.log("D")
+    document.getElementById("grade3").innerHTML="D"
+}
+else if (i>=50 && i<55) {
+    console.log("E+")
+    document.getElementById("grade3").innerHTML="E+"
+}
+else if (i<50) {
+    console.log("E")
+    document.getElementById("grade3").innerHTML="E"
+}
+    
+
+
+
+var name=document.getElementById("name").value;
+var college=document.getElementById("college").value;
+var candidatecode=document.getElementById("code").value;
+var semester=document.getElementById("sem").value;
+var subject1name=document.getElementById("sub1name").value;
+var subject1mark=document.getElementById("sub1mark").value;
+var subject1total=document.getElementById("sub1total").value;
+var subject2name=document.getElementById("sub2name").value;
+var subject2mark=document.getElementById("sub2mark").value;
+var subject2total=document.getElementById("sub2total").value;
+var subject3name=document.getElementById("sub3name").value;
+var subject3mark=document.getElementById("sub3mark").value;
+var subject3total=document.getElementById("sub3total").value;
+
+console.log(name);
+console.log(college);
+console.log(candidatecode);
+console.log(semester);
+console.log(subject1name);
+console.log(subject1mark);
+console.log(subject1total);
+console.log(subject2name);
+console.log(subject2mark);
+console.log(subject2total);
+console.log(subject3name);
+console.log(subject3mark);
+console.log(subject3total);
+
+document.getElementById("name1").innerHTML=name;
+document.getElementById("code1").innerHTML=candidatecode;
+document.getElementById("sem1").innerHTML=semester;
+document.getElementById("college1").innerHTML=college;
+document.getElementById("subname1").innerHTML=subject1name;
+document.getElementById("submark1").innerHTML=subject1mark;
+document.getElementById("subtotal1").innerHTML=subject1total;
+document.getElementById("subname2").innerHTML=subject2name;
+document.getElementById("submark2").innerHTML=subject2mark;
+document.getElementById("subtotal2").innerHTML=subject2total;
+document.getElementById("subname3").innerHTML=subject3name;
+document.getElementById("submark3").innerHTML=subject3mark;
+document.getElementById("subtotal3").innerHTML=subject3total;
+
+
+if (c>60 && f>60 && i>60){
+
+    console.log("Passed")
+    document.getElementById("status").innerHTML="Passed";
+}
+
+else {
+    console.log("Failed")
+    document.getElementById("status").innerHTML="Failed"; 
+}
+
+
+}
+
+        </script>
+</body>
+
+</html>
+

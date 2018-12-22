@@ -19,13 +19,12 @@
         <script>
             function emailvalidate() 
             {
-              var x = document.forms["myForm"]["email"].value;
-              var atpos = x.indexOf("@");
-              var dotpos = x.lastIndexOf(".");
-              if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
-                {
-                alert("Not a valid e-mail address");
-                return false;             }       
+                var reg=/^([A-Za-z0-9_\-\.]){1,}\+@([A-Za-z0-9_\-\.]){1,}\.+([A-Za-z)] {1,})+$/;
+              var address=document.getElementById("Email").value;
+              if (reg.test(address)==false) {
+                  
+                  alert('Invalid email address');
+                  return false;             }      
              }  
              function displaytoggle(){
                  var login=document.getElementById("login");
@@ -50,30 +49,36 @@
     <style>
 
 body {
-    background-color:lightblue;
+    background-image: linear-gradient(blue,lightblue);
+    min-height: 100vh;
 }
     .container {
         margin: auto;
         width: 100%;       
-        margin-top: 150px;                        
+          
+                             
     }
 
     .container_login {
         display: flex;
         justify-content: center;    
-        flex-direction: row;            
+        flex-direction: row; 
+        margin-top: 150px;
+                   
     }
 
     .container_register {
         display: flex;
         flex-direction: row;
         justify-content: center;   
+        height: 500px;
+        margin-top: 100px;
         /* display: none;   */
     
     }
 
     .image {
-        height: 435px;
+        height: 500px;
     }
     
     .form1 {       
@@ -191,3 +196,4 @@ body {
     </div>
 </body>
 </html>
+
