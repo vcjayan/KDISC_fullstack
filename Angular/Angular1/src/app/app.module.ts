@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -12,8 +11,10 @@ import { MainComponent } from './main/main.component';
 import { UsersListComponent } from './users-list/users-list.component';
 import { ApiserviceService } from './apiservice.service';
 import { HttpModule } from '@angular/http';
+import { CommentsComponent } from './comments/comments.component';
 const appRoutes:Routes=[
-{path:'',component:AppComponent},{path:'about',component:AboutComponent},{path:'users',component:UsersListComponent}
+{path:'',component:AppComponent},{path:'about',component:AboutComponent},
+{path:'users',component:UsersListComponent},{path:'comments',component:CommentsComponent}
 
 ];
 
@@ -25,7 +26,8 @@ const appRoutes:Routes=[
     DisplayComponent,
     AboutComponent,
     MainComponent,
-    UsersListComponent
+    UsersListComponent,
+    CommentsComponent
   ],
   imports: [
     BrowserModule,
@@ -34,6 +36,6 @@ const appRoutes:Routes=[
     HttpModule
   ],
   providers: [ApiserviceService],
-  bootstrap: [Navbar1Component,MainComponent]
+  bootstrap: [MainComponent,Navbar1Component]
 })
 export class AppModule { }

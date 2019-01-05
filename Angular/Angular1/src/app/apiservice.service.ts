@@ -16,6 +16,15 @@ export class ApiserviceService {
   )
   }
 
+  getServercomments():any{
+    return this.http.get('https://jsonplaceholder.typicode.com/posts')
+    .map(
+      (response:Response) => response.json()
+    )
+    }
+
+
+
 
 }
 

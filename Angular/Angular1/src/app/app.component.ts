@@ -30,6 +30,7 @@ export class AppComponent {
   grade1:string='';
   grade2:string='';
   grade3:string='';
+  status:string=''
   
   
     
@@ -53,7 +54,7 @@ export class AppComponent {
 
     this.percentage1=(this.subject1marks/this.subject1total)*100
     this.percentage2=(this.subject2marks/this.subject2total)*100
-    this.percentage2=(this.subject3marks/this.subject3total)*100
+    this.percentage3=(this.subject3marks/this.subject3total)*100
 
     if (this.percentage1>=95) {
      this.grade1='S';
@@ -88,7 +89,80 @@ export class AppComponent {
   else if (this.percentage1 <50){
     this.grade1='F';    
   }
-  
+
+  if (this.percentage2>=95) {
+    this.grade2='S';
+   }
+   else if (95>this.percentage2 && this.percentage2>=90){
+   this.grade2='A+';    
+ }
+ else if (90>this.percentage2 && this.percentage2>=85){
+   this.grade2='A';    
+ }
+ else if (85>this.percentage2 && this.percentage2>=80){
+   this.grade2='B+';    
+ }
+ else if (80>this.percentage2 && this.percentage2>=75){
+   this.grade2='B';    
+ }
+ else if (75>this.percentage2 && this.percentage2>=70){
+   this.grade2='C+';    
+ }
+ else if (70>this.percentage2 && this.percentage2>=65){
+   this.grade2='C';    
+ }
+ else if (65>this.percentage2 && this.percentage2>=60){
+   this.grade2='D+';    
+ }
+ else if (60>this.percentage2 && this.percentage2>=55){
+   this.grade2='D';    
+ }
+ else if (55>this.percentage2 && this.percentage2>=50){
+   this.grade2='E';    
+ }
+ else if (this.percentage2 <50){
+   this.grade2='F';    
+ }
+
+ if (this.percentage3>=95) {
+  this.grade3='S';
+ }
+ else if (95>this.percentage3 && this.percentage3>=90){
+ this.grade3='A+';    
+}
+else if (90>this.percentage3 && this.percentage3>=85){
+ this.grade3='A';    
+}
+else if (85>this.percentage3 && this.percentage3>=80){
+ this.grade3='B+';    
+}
+else if (80>this.percentage3 && this.percentage3>=75){
+ this.grade3='B';    
+}
+else if (75>this.percentage3 && this.percentage3>=70){
+ this.grade3='C+';    
+}
+else if (70>this.percentage3 && this.percentage3>=65){
+ this.grade3='C';    
+}
+else if (65>this.percentage3 && this.percentage3>=60){
+ this.grade3='D+';    
+}
+else if (60>this.percentage3 && this.percentage3>=55){
+ this.grade3='D';    
+}
+else if (55>this.percentage3 && this.percentage3>=50){
+ this.grade3='E';    
+}
+else if (this.percentage3 <50){
+ this.grade3='F';    
 }
 
+if ((this.percentage1>=55) && (this.percentage2>=55) && (this.percentage3>=55)) {
+this.status='Passed'  
 }
+else {
+  this.status='Failed'
+}
+
+}}

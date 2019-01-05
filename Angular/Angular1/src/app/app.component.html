@@ -19,11 +19,11 @@
 
 
 
-<form class="form" (ngSubmit)="onSubmit(f)" #f="ngForm">
+<form (ngSubmit)="onSubmit(f)" #f="ngForm">
  
 
-  Name:
-        <input type="text" name="getname" ngModel>
+        Name:
+        <input type="text" name="getname" placeholder="Name" required ngModel >
         <br>
         College:
         <input type="text" name="getcollege" ngModel>
@@ -64,15 +64,20 @@
         <br>
         <button type="submit" class="btn btn-primary">Submit</button>
         <br>
-        <app-display [name]="name" [college]="college" [candidatecode]="candidatecode" [semester]="semester" ></app-display>
+        <app-display [name]="name" [college]="college" 
+        [candidatecode]="candidatecode" [semester]="semester"
+        [subject1name]="subject1name" [subject2name]="subject2name"
+        [subject3name]="subject3name" [subject1marks]="subject1marks"
+        [subject2marks]="subject2marks" [subject3marks]="subject3marks"
+        [subject1total]="subject1total" [subject2total]="subject2total"
+        [subject3total]="subject3total" [grade1]="grade1" [grade2]="grade2"
+        [grade3]="grade3" [status]="status"
+         ></app-display>
         
         
         
-        Subjet1 grade: {{grade1}}
-        <br>
-        Subjet2 grade: {{grade2}}
-        <br>
-        Subjet3 grade: {{grade3}}
+        
+        
 
 
         
